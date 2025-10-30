@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login | Assistente Virtual Porto Seguro</title>
+  <meta name="description" content="Assistente Virtual Porto Seguro para prestadores de serviço de guincho">
+  <meta name="keywords" content="Porto Seguro, Assistente Virtual, Guincho, IA">
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/5/57/Porto_Seguro_Logo.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="login-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Porto_Seguro_Logo.jpg" class="logo" alt="Porto Seguro Logo" aria-label="Logo Porto Seguro">
+      <h2>Bem-vindo ao Assistente Virtual</h2>
+      <form action="dashboard.html" method="post" autocomplete="on">
+        <div class="form-group">
+          <input type="email" name="email" placeholder="E-mail" class="form-control" required aria-label="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="password" name="senha" placeholder="Senha" class="form-control" required aria-label="Senha">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      </form>
+      <button class="btn-social google" onclick="window.location.href='dashboard.html'" aria-label="Entrar com Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg" alt="Google Logo">Entrar com Google
+      </button>
+      <button class="btn-social microsoft" onclick="window.location.href='dashboard.html'" aria-label="Entrar com Microsoft">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">Entrar com Microsoft
+      </button>
+      <a href="recuperar.html" class="forgot-link">Esqueceu a senha?</a>
+      <a href="cadastro.html" class="register-link">Não tem conta? Cadastre-se</a>
+    </div>
+  </main>
+</body>
+</html>
