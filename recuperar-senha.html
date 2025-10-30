@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Recuperar Senha - Porto Seguro</title>
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="./porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="./porto_seguro_files/responsiveslides.css">
+  <meta name="description" content="Recupere o acesso à sua conta Porto Seguro.">
+  <meta name="keywords" content="Recuperar Senha, Porto Seguro, Assistente Virtual">
+  <style>
+    body {
+      background: #F6F7FB;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-container {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 10px 24px #00000010;
+      padding: 32px 24px 24px 24px;
+      max-width: 380px;
+      width: 100%;
+      margin: 32px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .login-logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 18px;
+      display: block;
+    }
+    .login-title {
+      color: #00a1fc;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      text-align: center;
+      letter-spacing: -1px;
+    }
+    .login-subtitle {
+      color: #333;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .login-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-control {
+      border-radius: 12px;
+      border: 1px solid #d1e3f8;
+      padding: 12px 16px;
+      font-size: 1rem;
+      margin-bottom: 0;
+      width: 100%;
+      background: #f9fbfd;
+      color: #222;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .form-control:focus {
+      border-color: #00a1fc;
+      background: #fff;
+    }
+    .btn-login {
+      background: linear-gradient(45deg, #00a1fc, #006eac);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 70px;
+      padding: 12px 0;
+      margin-top: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-login:hover {
+      background: linear-gradient(45deg, #0090e0, #005a8d);
+    }
+    .link-recuperar {
+      color: #00a1fc;
+      text-decoration: underline;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .link-recuperar:hover {
+      color: #006eac;
+    }
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 18px 6vw 18px 6vw;
+        max-width: 98vw;
+      }
+      .login-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="login-container" aria-label="Recuperação de Senha">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Porto_Seguro_Logo.jpg" alt="Logo Porto Seguro" class="login-logo">
+      <h2 class="login-title">Recuperar Senha</h2>
+      <p class="login-subtitle">Informe seu e-mail cadastrado</p>
+      <form action="#" method="post" class="login-form" autocomplete="email">
+        <input type="email" class="form-control" name="email" placeholder="E-mail" required aria-label="E-mail">
+        <button type="submit" class="btn btn-primary btn-login">Enviar Link de Recuperação</button>
+      </form>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="login.html" class="link-recuperar">Voltar ao Login</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
