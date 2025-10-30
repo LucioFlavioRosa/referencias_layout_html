@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Recuperar Senha - Assistente Virtual Porto Seguro</title>
+  <meta name="description" content="Login - Assistente Virtual Porto Seguro para prestadores de serviço de guincho">
+  <meta name="keywords" content="Porto Seguro, Assistente Virtual, Guincho, Login">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="./porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="./porto_seguro_files/responsiveslides.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #00a1fc 0%, #005a8d 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px #00000018;
+      padding: 38px 28px 32px 28px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+    .card .logo {
+      margin-bottom: 18px;
+      border-radius: 20px;
+      max-width: 100px;
+      height: auto;
+      box-shadow: 0 4px 16px #005a8d22;
+    }
+    .card h1 {
+      color: #005a8d;
+      font-size: 1.7rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    .card p {
+      font-weight: 100;
+      color: #006eac;
+      margin-bottom: 22px;
+      font-size: 1rem;
+    }
+    .form-group {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 30px;
+      border: 1px solid #00a1fc;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .form-control:focus {
+      border-color: #005a8d;
+    }
+    .btn-recuperar {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      border-radius: 40px;
+      background: linear-gradient(45deg, #00a1fc, #006eac);
+      color: #fff;
+      border: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px #00a1fc22;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-recuperar:hover {
+      background: linear-gradient(45deg, #005a8d, #00a1fc);
+    }
+    .card .back-link {
+      display: block;
+      margin-top: 16px;
+      color: #00a1fc;
+      font-weight: 900;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .card .back-link:hover {
+      color: #005a8d;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px 6px 18px 6px;
+        border-radius: 30px;
+      }
+      .card h1 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Porto_Seguro_Logo.jpg" alt="Logo Porto Seguro" class="logo">
+      <h1>Recuperar Senha</h1>
+      <p>Informe seu e-mail para receber o link de recuperação de senha.</p>
+      <form action="#" method="post" autocomplete="on">
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required aria-label="E-mail">
+        </div>
+        <button type="submit" class="btn-recuperar">Enviar link de recuperação</button>
+      </form>
+      <a href="login.html" class="back-link">Voltar ao login</a>
+    </div>
+  </main>
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>
