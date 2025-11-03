@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login | Plataforma Porto Seguro</title>
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="./porto_seguro_files/estilo.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #00a1fc 0%, #005a8d 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .login-card {
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 10px 24px #00000018;
+      padding: 48px 40px 32px 40px;
+      max-width: 400px;
+      width: 100%;
+      margin: 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .login-card .logo-porto {
+      width: 120px;
+      height: auto;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px #00a1fc22;
+      background: #fff;
+      padding: 6px 8px;
+      display: block;
+    }
+    .login-card h2 {
+      color: #005a8d;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+    .form-group {
+      width: 100%;
+      margin-bottom: 18px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      font-size: 1rem;
+      background: #f9f9f9;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      color: #222;
+    }
+    .form-control:focus {
+      border-color: #00a1fc;
+      box-shadow: 0 0 0 0.2rem rgba(0,161,252,0.20);
+      outline: none;
+      background: #fff;
+    }
+    .btn-login {
+      width: 100%;
+      background: linear-gradient(45deg, #00a1fc, #005a8d);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 70px;
+      padding: 12px 0;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 12px #00a1fc22;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .btn-login:hover {
+      background: linear-gradient(45deg, #005a8d, #00a1fc);
+      transform: translateY(-2px);
+    }
+    .btn-microsoft {
+      width: 100%;
+      background: #fff;
+      color: #222;
+      border: 1px solid #e0e0e0;
+      border-radius: 70px;
+      padding: 10px 0;
+      font-weight: 700;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px #00000010;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .btn-microsoft:hover {
+      border-color: #00a1fc;
+      box-shadow: 0 4px 16px #00a1fc22;
+      transform: translateY(-2px);
+    }
+    .btn-microsoft img {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+    .login-actions {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .forgot-link {
+      color: #00a1fc;
+      font-size: 0.98rem;
+      text-decoration: underline;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .forgot-link:hover {
+      color: #005a8d;
+    }
+    @media (max-width: 600px) {
+      .login-card {
+        padding: 30px 16px 20px 16px;
+        max-width: 98vw;
+        border-radius: 18px;
+      }
+      .login-card h2 {
+        font-size: 1.3rem;
+      }
+      .btn-login, .btn-microsoft {
+        font-size: 1rem;
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main style="width:100vw;min-height:100vh;display:flex;align-items:center;justify-content:center;">
+    <section class="login-card" aria-label="Área de Login">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Porto_Seguro_Logo.jpg" alt="Logo Porto Seguro" class="logo-porto">
+      <h2>Bem-vindo à Plataforma Porto Seguro</h2>
+      <form autocomplete="on" method="post" action="#" aria-label="Formulário de Login">
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required autocomplete="username" aria-label="E-mail">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required autocomplete="current-password" aria-label="Senha">
+        </div>
+        <button type="submit" class="btn-login" aria-label="Entrar na plataforma">Entrar</button>
+      </form>
+      <button class="btn-microsoft" type="button" aria-label="Login com Microsoft">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Logo Microsoft">
+        Entrar com Microsoft
+      </button>
+      <div class="login-actions">
+        <span></span>
+        <a href="#" class="forgot-link" aria-label="Recuperar senha">Esqueceu a senha?</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
