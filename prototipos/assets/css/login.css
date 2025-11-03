@@ -1,0 +1,179 @@
+/* Reset e base */
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: #f6f7fb;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.login-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+.login-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 161, 252, 0.10);
+  padding: 40px 32px;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-in 1s cubic-bezier(.39,.575,.565,1) both;
+}
+@media (max-width: 600px) {
+  .login-card {
+    padding: 20px 10px;
+    max-width: 95vw;
+  }
+}
+.login-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.logo-porto {
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+.login-title {
+  color: #005a8d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-group label {
+  color: #005a8d;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.form-control {
+  border: 1px solid #cce6f9;
+  border-radius: 5px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  background: #f9fcff;
+  color: #222;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  border-color: #00a1fc;
+  outline: none;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 70px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
+  width: 100%;
+}
+.btn-login {
+  background: linear-gradient(45deg, #00a1fc, #006eac);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,161,252,0.10);
+}
+.btn-login:hover, .btn-microsoft:hover {
+  box-shadow: 0 5px 15px rgba(0,161,252,0.3);
+}
+.btn-microsoft {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  font-weight: 600;
+  gap: 10px;
+  position: relative;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  margin-bottom: 20px;
+}
+.logo-microsoft {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #b3b3b3;
+  font-size: 0.95rem;
+}
+.login-divider span {
+  flex: 1;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 8px;
+  line-height: 0.1em;
+}
+.login-footer {
+  width: 100%;
+  text-align: right;
+  margin-top: 8px;
+}
+.recuperar-senha {
+  color: #00a1fc;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.recuperar-senha:hover {
+  text-decoration: underline;
+}
+/* Animações sutis */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.9s cubic-bezier(.39,.575,.565,1) both;
+}
+@keyframes slide-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.7s 0.3s cubic-bezier(.39,.575,.565,1) both;
+}
+/* Responsividade refinada */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px 4vw;
+    max-width: 100vw;
+  }
+  .login-title {
+    font-size: 1.2rem;
+  }
+  .btn, .btn-login, .btn-microsoft {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  .logo-porto {
+    max-width: 90px;
+  }
+}
