@@ -1,0 +1,169 @@
+/* COMPONENTES REUTILIZÁVEIS - PORTO SEGURO */
+
+:root {
+  --porto-primary: #00a1fc;
+  --porto-secondary: #006eac;
+  --porto-gradient: linear-gradient(45deg, #00a1fc 0%, #006eac 100%);
+  --porto-radius: 20px;
+  --porto-radius-xl: 70px;
+  --porto-font: 'Segoe UI', 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--porto-font);
+  background: var(--porto-gradient);
+  margin: 0;
+}
+
+.container-login {
+  min-width: 320px;
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: var(--porto-radius);
+  box-shadow: 0 8px 32px #0002;
+  padding: 48px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+}
+
+.login-header {
+  margin-bottom: 18px;
+}
+
+.login-title {
+  color: var(--porto-primary);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.porto-logo {
+  display: block;
+  margin: 0 auto 16px auto;
+  max-width: 120px;
+  border-radius: 12px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #d6eaff;
+  border-radius: var(--porto-radius);
+  background: #f9fbfd;
+  color: #222;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.form-control:focus {
+  border-color: var(--porto-primary);
+  outline: none;
+  background: #fff;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--porto-font);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--porto-radius-xl);
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary, .btn-contact {
+  background: var(--porto-gradient);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 10px 35px;
+  border: 2px solid var(--porto-primary);
+  border-radius: var(--porto-radius-xl);
+  box-shadow: 0 2px 8px #00a1fc22;
+}
+.btn-primary:hover, .btn-contact:hover {
+  background: linear-gradient(45deg, #006eac 0%, #00a1fc 100%);
+  color: #fff;
+  border-color: var(--porto-secondary);
+}
+
+.btn-theme, .btn-microsoft {
+  background: #fff;
+  color: #000;
+  border: 2px solid var(--porto-primary);
+  border-radius: var(--porto-radius-xl);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 35px;
+  box-shadow: 0 2px 8px #0001;
+  transition: all 0.3s ease;
+}
+.btn-theme:hover, .btn-microsoft:hover {
+  background: #e6f5fd;
+  color: var(--porto-primary);
+  border-color: var(--porto-secondary);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Sistema de Grid (Mobile First) */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+[class^="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+
+@media (min-width: 768px) {
+  .container-login {
+    max-width: 400px;
+    padding: 56px 48px 40px 48px;
+  }
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container-login {
+    padding: 32px 8px 24px 8px;
+  }
+  .login-title {
+    font-size: 1.1rem;
+  }
+}
