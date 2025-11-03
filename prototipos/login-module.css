@@ -1,0 +1,70 @@
+/* Módulo CSS para padronização e experiência fluida na tela de login Porto Seguro */
+.login-card {
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 10px 32px #00000010;
+  padding: 40px 32px 32px 32px;
+  margin: 0 auto;
+}
+.btn-login {
+  background: linear-gradient(45deg, #00a1fc, #006eac);
+  border-radius: 70px;
+  border: none;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  transition: background 0.2s;
+}
+.btn-login:hover, .btn-microsoft-login:hover {
+  background: linear-gradient(45deg, #006eac, #00a1fc);
+  color: #fff;
+}
+.btn-microsoft-login {
+  border-radius: 70px;
+  border: 1px solid #e4e4e4;
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px #00000008;
+}
+.divider-text {
+  display: inline-block;
+  background: #fff;
+  padding: 0 18px;
+  position: relative;
+  color: #bbb;
+  font-size: 1rem;
+}
+.divider-text:before, .divider-text:after {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 1.5px;
+  background: #e4e4e4;
+  vertical-align: middle;
+  margin: 0 8px;
+}
+.recuperar-senha-link {
+  color: #00a1fc;
+  font-size: 0.98rem;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.recuperar-senha-link:hover {
+  color: #006eac;
+}
+@media (max-width: 575.98px) {
+  .login-card {
+    padding: 24px 8px 16px 8px;
+    border-radius: 18px;
+  }
+  .btn-login, .btn-microsoft-login {
+    font-size: 1rem;
+    padding: 9px 0;
+  }
+  .divider-text:before, .divider-text:after {
+    width: 18px;
+  }
+}
