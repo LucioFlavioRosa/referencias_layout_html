@@ -1,0 +1,88 @@
+/* Módulo CSS Global - Porto Seguro */
+.card-porto {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 10px 20px #00000010;
+  padding: 40px;
+  max-width: 400px;
+  margin: 40px auto;
+}
+.btn-porto-primary {
+  background: linear-gradient(45deg, #00a1fc, #006eac);
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  border: none;
+  border-radius: 70px;
+  padding: 12px 40px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #005a8d33;
+}
+.btn-porto-primary:hover {
+  background: linear-gradient(45deg, #006eac, #00a1fc);
+}
+.btn-microsoft {
+  background: #fff;
+  color: #333;
+  border: 1px solid #e5e5e5;
+  border-radius: 70px;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px #00000010;
+  margin-bottom: 15px;
+}
+.btn-microsoft:hover {
+  background: #f3f3f3;
+}
+.login-logo {
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 160px;
+  height: auto;
+}
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  padding: 12px 18px;
+  font-size: 17px;
+  margin-bottom: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.login-form label {
+  font-weight: 700;
+  color: #005a8d;
+  margin-bottom: 7px;
+  display: block;
+  font-size: 16px;
+}
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+.recuperar-senha {
+  color: #00a1fc;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .card-porto {
+    padding: 25px;
+    border-radius: 20px;
+  }
+  .btn-porto-primary {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+  .login-logo {
+    max-width: 120px;
+  }
+}
