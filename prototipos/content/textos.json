@@ -1,0 +1,40 @@
+{
+  "titulo_pagina": "Solicitar Pedido de Transporte",
+  "descricao_pagina": "Preencha os dados abaixo para solicitar a retirada de mercadoria no fornecedor.",
+  "formulario": {
+    "nomeSolicitante": "Nome do Solicitante",
+    "emailSolicitante": "E-mail para contato",
+    "telefoneSolicitante": "Telefone",
+    "dados_fornecedor": "Dados do Fornecedor",
+    "nomeFornecedor": "Nome do Fornecedor",
+    "enderecoFornecedor": "Endereço do Fornecedor",
+    "cidadeFornecedor": "Cidade",
+    "contatoFornecedor": "Telefone do Fornecedor",
+    "info_mercadoria": "Informações da Mercadoria",
+    "descricaoMercadoria": "Descrição da Mercadoria",
+    "quantidade": "Quantidade",
+    "peso": "Peso Total (kg)",
+    "tipoCarga": "Tipo de Carga",
+    "tipoCarga_opcoes": [
+      "Selecione",
+      "Paletizada",
+      "Granel",
+      "Container",
+      "Fracionada",
+      "Outro"
+    ],
+    "dataRetirada": "Data para Retirada",
+    "observacoes": "Observações",
+    "botao_enviar": "Enviar Pedido"
+  },
+  "mensagens": {
+    "sucesso": "Pedido enviado com sucesso!",
+    "erro": "Ocorreu um erro ao enviar o pedido. Por favor, tente novamente.",
+    "campos_obrigatorios": "Por favor, preencha todos os campos obrigatórios."
+  },
+  "footer": {
+    "contato": "Contato",
+    "telefone": "Telefone:",
+    "email": "E-mail:"
+  }
+}
