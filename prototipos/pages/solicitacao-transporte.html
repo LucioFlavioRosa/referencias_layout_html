@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <title>Solicitação de Transporte | Pedido para Transportadora</title>
+  <link rel="stylesheet" href="../../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../../porto_seguro_files/responsiveslides.css">
+  <meta name="description" content="Solicite transporte para retirada de mercadoria no fornecedor.">
+  <meta name="keywords" content="Solicitação Transporte, Pedido Transportadora, Retirada Fornecedor">
+  <script type="text/javascript" src="../../porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="../../porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="../../porto_seguro_files/responsiveslides.min.js.baixados"></script>
+</head>
+<body>
+  <div class="w3l-bootstrap-header fixed-top">
+    <nav id="topo" class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../../porto_seguro_files/logoSimular-Azul.png" style="height:50px;" alt="Simular Seguros e Porto Seguro" title="Simular Seguros e Porto Seguro">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Solicitação Transporte</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section id="banner" style="background: #00a1fc;padding: 60px 0 !important;">
+    <div class="container-fluid text-center">
+      <div class="row justify-content-center">
+        <div class="col-md-7 p-0 d-none d-md-block">
+          <div class="d-flex align-items-center justify-content-center h-100" style="min-height:400px;">
+            <h1 style="color:#fff;font-size: 2.8rem;font-weight: 900;line-height:1.1;">Solicitação de Transporte<br><span style="font-weight:100;font-size:1.8rem;">Preencha o formulário para solicitar a retirada da mercadoria no fornecedor.</span></h1>
+          </div>
+        </div>
+        <div class="col-md-4 pt-md-5 col-12">
+          <div id="chamada"><span style="font-weight:100;font-size: 28px;color:#000;">Pedido para Transportadora</span></div>
+          <div id="formulario">
+            <form id="formSolicitacaoTransporte" action="confirmacao.html" method="post" novalidate>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="nome_solicitante" id="nome_solicitante" placeholder="Nome do Solicitante:" required aria-label="Nome do Solicitante">
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="E-mail:" required aria-label="E-mail">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <input name="telefone" type="tel" inputmode="numeric" class="form-control" id="telefone" minlength="10" placeholder="Telefone:" required aria-label="Telefone">
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <input name="celular" type="tel" inputmode="numeric" class="form-control" id="celular" minlength="10" placeholder="Celular:" required aria-label="Celular">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input name="fornecedor" type="text" class="form-control" id="fornecedor" placeholder="Fornecedor (Nome e Endereço):" required aria-label="Fornecedor (Nome e Endereço)">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <input name="data_retirada" type="date" class="form-control" id="data_retirada" placeholder="Data de Retirada:" required aria-label="Data de Retirada">
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <input name="tipo_carga" type="text" class="form-control" id="tipo_carga" placeholder="Tipo de Carga:" required aria-label="Tipo de Carga">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6">
+                  <input name="peso_estimado" type="text" class="form-control" id="peso_estimado" placeholder="Peso Estimado (kg):" required aria-label="Peso Estimado">
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <input name="observacoes" type="text" class="form-control" id="observacoes" placeholder="Observações:" aria-label="Observações">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-contact" style="font-size: 20px;font-weight: 900;padding: 10px 35px;background: linear-gradient(45deg, #00a1fc, #006eac);border-color: #00a1fc;border-radius: 70px;">Solicitar Transporte</button>
+            </form>
+            <div id="erro-validacao" style="display:none;color:#c00;font-weight:600;margin-top:10px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-28" style="background:#005a8d;">
+    <div class="footer-bg-layer">
+      <div class="container py-lg-3">
+        <div class="row footer-top-28">
+          <div class="col-md-2 footer-list-28 mt-5">
+            <img src="../../porto_seguro_files/uma-parceria-porto.png" style="height:auto;max-width: 100%;" alt="Porto Seguro">
+          </div>
+          <div class="col-md-1 footer-list-28 mt-5 d-none d-md-block"></div>
+          <div class="col-md-5 footer-list-28 mt-5">
+            <h6 class="footer-title-28" style="color:#00a1fc;">Entre em contato</h6>
+            <ul>
+              <li><p><strong>Telefone:</strong> <a href="#">(11) 4224-1918</a></p></li>
+              <li><p><strong>WhatsApp</strong>: <a href="#">(11) 94720-2131</a></p></li>
+              <li><p><strong>E-mail</strong>: <a href="mailto:contato@empresa.com">contato@empresa.com</a></p></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-list-28 mt-5">
+            <img src="../../porto_seguro_files/logo-home-portoseguro.png" style="height:auto;max-width: 100%;" alt="Simular e Porto Seguro">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../porto_seguro_files/jquery-3.3.1.min.js.baixados"></script>
+  <script src="../../porto_seguro_files/bootstrap.min.js.baixados"></script>
+  <script>
+    document.getElementById('formSolicitacaoTransporte').addEventListener('submit', function(e) {
+      var form = e.target;
+      var camposObrigatorios = [
+        'nome_solicitante',
+        'email',
+        'telefone',
+        'celular',
+        'fornecedor',
+        'data_retirada',
+        'tipo_carga',
+        'peso_estimado'
+      ];
+      var erro = false;
+      camposObrigatorios.forEach(function(id) {
+        var campo = document.getElementById(id);
+        if (!campo.value || campo.value.trim() === '') {
+          erro = true;
+          campo.classList.add('is-invalid');
+        } else {
+          campo.classList.remove('is-invalid');
+        }
+      });
+      if (erro) {
+        document.getElementById('erro-validacao').style.display = 'block';
+        document.getElementById('erro-validacao').textContent = 'Por favor, preencha todos os campos obrigatórios.';
+        e.preventDefault();
+        return false;
+      } else {
+        document.getElementById('erro-validacao').style.display = 'none';
+      }
+      // Redirecionamento simulado
+      e.preventDefault();
+      window.location.href = 'confirmacao.html';
+      return false;
+    });
+  </script>
+</body>
+</html>
