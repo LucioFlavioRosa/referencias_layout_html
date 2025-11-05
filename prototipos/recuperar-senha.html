@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Recuperar Senha - Cotação de Ações</title>
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../porto_seguro_files/responsiveslides.css">
+  <meta name="description" content="Recupere o acesso à sua conta de cotação de ações.">
+  <meta name="keywords" content="Recuperar Senha, Cotação de Ações">
+  <script type="text/javascript" src="../porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/responsiveslides.min.js.baixados"></script>
+</head>
+<body>
+  <div class="w3l-bootstrap-header fixed-top">
+    <nav id="topo" class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../porto_seguro_files/logoSimular-Azul.png" style="height:50px;" alt="Simular Seguros e Porto Seguro" title="Simular Seguros e Porto Seguro">
+        </a>
+      </div>
+    </nav>
+  </div>
+  <main class="container" style="margin-top:100px;max-width:400px;">
+    <section aria-label="Recuperação de Senha">
+      <div class="heading text-center mx-auto" style="margin: 40px 0;">
+        <h3 class="head" style="color: #00a1fc;font-size: 32px;">Recuperar Senha</h3>
+      </div>
+      <form id="form-recuperar" autocomplete="on">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu e-mail" required aria-label="E-mail">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary btn-contact" style="width:100%;font-size:18px;">Enviar recuperação</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12 text-center">
+            <a href="login.html" style="color:#005a8d;text-decoration:underline;font-size:14px;">Voltar para o Login</a>
+          </div>
+        </div>
+      </form>
+      <div id="mensagem-sucesso" class="text-center" style="display:none;color:#00a1fc;font-weight:bold;margin-top:20px;">E-mail de recuperação enviado! Verifique sua caixa de entrada.</div>
+    </section>
+  </main>
+  <section class="w3l-market-footer" style="margin-top:60px;">
+    <div style="font-size: 12px;text-align: center;line-height: 14px;padding: 30px 20px;background: #fff;">
+      <div class="container">
+        SIMULAR CORRETORA E ADMINISTRADORA DE SEGUROS LTDA, CNPJ nº 12380316000135, encontra-se registrada na SUSEP, sob o nº 212113570, para atuar na atividade de corretagem de seguros referente aos produto de -  SEGUROS DE PESSOAS -  PLANOS DE PREVIDÊNCIA COMPLEMENTAR -  SEGUROS DE DANOS -  MICROSSEGUROS - PLANOS DE CAPITALIZAÇÃO - A sociedade encontra-se com cadastro Ativo.
+      </div>
+    </div>
+    <footer class="footer-28" style="background:#005a8d;">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-md-2 footer-list-28 mt-5">
+              <img src="../porto_seguro_files/uma-parceria-porto.png" style="height:auto;max-width: 100%;" alt="Porto Seguro">
+            </div>
+            <div class="col-md-1 footer-list-28 mt-5 d-none d-md-block"></div>
+            <div class="col-md-5 footer-list-28 mt-5">
+              <h6 class="footer-title-28" style="color:#00a1fc;">Entre em contato</h6>
+              <ul>
+                <li>
+                  <p><strong>Telefone:</strong> <a href="#">(11) 4224-1918</a></p>
+                </li>
+                <li>
+                  <p><strong>WhatsApp</strong>: <a href="#">(11) 94720-2131</a></p>
+                </li>
+                <li>
+                  <p><strong>E-mail</strong>: <a href="mailto:contatoautoporto@simularseguros.com">contatoautoporto@simularseguros.com</a></p>
+                </li>
+                <li>
+                  <p><strong>Política de monitoramento</strong>: <a href="#">Confira nossa Política de monitoramento</a></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4 footer-list-28 mt-5">
+              <img src="../porto_seguro_files/logo-home-portoseguro.png" style="height:auto;max-width: 100%;" alt="Simular e Porto Seguro">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <script>
+    document.getElementById('form-recuperar').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensagem-sucesso').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
