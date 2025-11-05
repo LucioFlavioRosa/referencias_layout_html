@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Confirmação de Solicitação | Transportadora</title>
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="../../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../../porto_seguro_files/responsiveslides.css">
+  <meta name="description" content="Confirmação de solicitação de transporte.">
+  <meta name="keywords" content="Transporte, Confirmação, Pedido, Protocolo">
+  <script type="text/javascript" src="../../porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="../../porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="../../porto_seguro_files/responsiveslides.min.js.baixados"></script>
+  <script type="text/javascript">
+    // Redirecionamento automático após 5 segundos
+    setTimeout(function() {
+      window.location.href = 'minhas-solicitacoes.html';
+    }, 5000);
+  </script>
+  <style>
+    .confirmacao-hero {
+      background: linear-gradient(45deg, #00a1fc, #006eac);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    .confirmacao-box {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 10px 32px #00000018;
+      max-width: 400px;
+      width: 100%;
+      padding: 48px 32px 32px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .confirmacao-icon {
+      background: #e6f9ff;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px auto;
+      font-size: 56px;
+      color: #00a1fc;
+      box-shadow: 0 2px 8px #00a1fc22;
+    }
+    .confirmacao-mensagem {
+      font-size: 1.4rem;
+      color: #005a8d;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .confirmacao-protocolo {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .confirmacao-botoes {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #00a1fc, #006eac);
+      color: #fff;
+      border: none;
+      border-radius: 70px;
+      padding: 10px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px #00a1fc22;
+      outline: none;
+      display: inline-block;
+    }
+    .btn-primary:hover, .btn-primary:focus {
+      background: linear-gradient(45deg, #006eac, #00a1fc);
+      color: #fff;
+      text-decoration: none;
+    }
+    .confirmacao-timer {
+      font-size: 0.95rem;
+      color: #888;
+      margin-top: 16px;
+    }
+    @media (max-width: 600px) {
+      .confirmacao-box {
+        padding: 32px 12px 24px 12px;
+        max-width: 95vw;
+      }
+    }
+  </style>
+</head>
+<body style="margin:0;">
+  <section class="confirmacao-hero">
+    <div class="confirmacao-box" role="alert" aria-live="polite">
+      <div class="confirmacao-icon" aria-label="Sucesso">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="30" cy="30" r="30" fill="#e6f9ff"/>
+          <path d="M18 32.5L27 41L43 24" stroke="#00a1fc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="confirmacao-mensagem">Solicitação enviada com sucesso!</div>
+      <div class="confirmacao-protocolo">Protocolo: <strong>#12345678</strong></div>
+      <div class="confirmacao-botoes">
+        <a href="solicitacao-transporte.html" class="btn-primary" aria-label="Nova Solicitação">Nova Solicitação</a>
+        <a href="minhas-solicitacoes.html" class="btn-primary" aria-label="Ver Minhas Solicitações">Ver Minhas Solicitações</a>
+      </div>
+      <div class="confirmacao-timer" id="timer-msg">Você será redirecionado em <span id="timer">5</span> segundos...</div>
+    </div>
+  </section>
+  <script>
+    // Timer regressivo para feedback visual
+    var tempo = 5;
+    var timerEl = document.getElementById('timer');
+    var interval = setInterval(function() {
+      tempo--;
+      if (timerEl) timerEl.textContent = tempo;
+      if (tempo <= 0) clearInterval(interval);
+    }, 1000);
+  </script>
+</body>
+</html>
