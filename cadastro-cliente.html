@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Cliente - Simulador de Cotações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="./porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="./porto_seguro_files/responsiveslides.css">
+  <script type="text/javascript" src="./porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="./porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="./porto_seguro_files/responsiveslides.min.js.baixados"></script>
+</head>
+<body>
+  <header class="w3l-bootstrap-header fixed-top">
+    <nav id="topo" class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./porto_seguro_files/logoSimular-Azul.png" style="height:50px;" alt="Simular Seguros">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main style="margin-top:120px;">
+    <section class="container" style="max-width:500px;">
+      <h2 class="text-center">Cadastro de Cliente</h2>
+      <form action="dashboard.html" method="post" aria-label="Formulário de Cadastro">
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" class="form-control" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" class="form-control" required placeholder="Digite seu e-mail">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" class="form-control" required placeholder="Digite seu telefone">
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" class="form-control" required placeholder="Crie uma senha">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+      </form>
+      <div class="text-center mt-3">
+        <span>Já possui conta? <a href="login.html">Entrar</a></span>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-28" style="background:#005a8d; margin-top:60px;">
+    <div class="footer-bg-layer">
+      <div class="container py-lg-3">
+        <div class="row footer-top-28">
+          <div class="col-md-2 footer-list-28 mt-5">
+            <img src="./porto_seguro_files/uma-parceria-porto.png" style="height:auto;max-width: 100%;" alt="Porto Seguro">
+          </div>
+          <div class="col-md-1 footer-list-28 mt-5 d-none d-md-block"></div>
+          <div class="col-md-5 footer-list-28 mt-5">
+            <h6 class="footer-title-28" style="color:#00a1fc;">Contato</h6>
+            <ul>
+              <li><p><strong>Telefone:</strong> <a href="#">(11) 4224-1918</a></p></li>
+              <li><p><strong>WhatsApp:</strong> <a href="#">(11) 94720-2131</a></p></li>
+              <li><p><strong>E-mail:</strong> <a href="mailto:contato@simulador.com">contato@simulador.com</a></p></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-list-28 mt-5">
+            <img src="./porto_seguro_files/logo-home-portoseguro.png" style="height:auto;max-width: 100%;" alt="Simular e Porto Seguro">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
