@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Cotação de Ações</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="./porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="./porto_seguro_files/responsiveslides.css">
+  <script type="text/javascript" src="./porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="./porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="./porto_seguro_files/responsiveslides.min.js.baixados"></script>
+  <script src="./porto_seguro_files/jquery-3.3.1.min.js.baixados"></script>
+  <script src="./porto_seguro_files/bootstrap.min.js.baixados"></script>
+</head>
+<body>
+  <!-- Header -->
+  <!--#include file="components/header.html" -->
+  <div id="header-placeholder"></div>
+  <script>
+    $(function(){
+      $("#header-placeholder").load("components/header.html");
+    });
+  </script>
+
+  <main class="container" style="margin-top:90px;">
+    <section class="row">
+      <div class="col-12 text-center mb-4">
+        <h1 style="color:#005a8d;font-size:2.5rem;font-weight:900;">Bem-vindo, Usuário Teste!</h1>
+        <p style="font-size:1.2rem;color:#333;">Acompanhe as cotações de ações em tempo real.</p>
+      </div>
+    </section>
+    <section class="row">
+      <!-- Cards de cotações de ações -->
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card" style="box-shadow:0 4px 16px #00000010;border-radius:20px;padding:20px;text-align:center;">
+          <h2 style="color:#00a1fc;font-weight:900;font-size:1.5rem;">PETR4</h2>
+          <p style="font-size:2rem;font-weight:700;color:#005a8d;" id="cotacao-petr4">R$ 34,20</p>
+          <span style="color:#008000;font-weight:700;">+1,25%</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card" style="box-shadow:0 4px 16px #00000010;border-radius:20px;padding:20px;text-align:center;">
+          <h2 style="color:#00a1fc;font-weight:900;font-size:1.5rem;">VALE3</h2>
+          <p style="font-size:2rem;font-weight:700;color:#005a8d;" id="cotacao-vale3">R$ 68,10</p>
+          <span style="color:#d00;font-weight:700;">-0,80%</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card" style="box-shadow:0 4px 16px #00000010;border-radius:20px;padding:20px;text-align:center;">
+          <h2 style="color:#00a1fc;font-weight:900;font-size:1.5rem;">ITUB4</h2>
+          <p style="font-size:2rem;font-weight:700;color:#005a8d;" id="cotacao-itub4">R$ 28,45</p>
+          <span style="color:#008000;font-weight:700;">+0,50%</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card" style="box-shadow:0 4px 16px #00000010;border-radius:20px;padding:20px;text-align:center;">
+          <h2 style="color:#00a1fc;font-weight:900;font-size:1.5rem;">BBDC4</h2>
+          <p style="font-size:2rem;font-weight:700;color:#005a8d;" id="cotacao-bbdc4">R$ 22,30</p>
+          <span style="color:#008000;font-weight:700;">+0,90%</span>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-12 text-center mt-4">
+        <small style="color:#666;">Atualizado em <span id="data-atualizacao"></span></small>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <!--#include file="components/footer.html" -->
+  <div id="footer-placeholder"></div>
+  <script>
+    $(function(){
+      $("#footer-placeholder").load("components/footer.html");
+    });
+    // Simulação de atualização dinâmica das cotações e data
+    function atualizarCotacoes() {
+      // Simulação: valores aleatórios para cada ação
+      const cotacoes = {
+        PETR4: (33 + Math.random() * 2).toFixed(2),
+        VALE3: (67 + Math.random() * 2).toFixed(2),
+        ITUB4: (27 + Math.random() * 2).toFixed(2),
+        BBDC4: (21 + Math.random() * 2).toFixed(2)
+      };
+      $("#cotacao-petr4").text("R$ " + cotacoes.PETR4);
+      $("#cotacao-vale3").text("R$ " + cotacoes.VALE3);
+      $("#cotacao-itub4").text("R$ " + cotacoes.ITUB4);
+      $("#cotacao-bbdc4").text("R$ " + cotacoes.BBDC4);
+      const data = new Date();
+      const format = data.toLocaleString('pt-BR');
+      $("#data-atualizacao").text(format);
+    }
+    setInterval(atualizarCotacoes, 5000);
+    atualizarCotacoes();
+  </script>
+</body>
+</html>
