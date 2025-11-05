@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+  <title>Pedido para Transportadora</title>
+  <link rel="stylesheet" href="../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../porto_seguro_files/responsiveslides.css">
+  <script type="text/javascript" src="../porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/responsiveslides.min.js.baixados"></script>
+</head>
+<body>
+  <div class="w3l-bootstrap-header fixed-top">
+    <nav id="topo" class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="#" title="Página inicial da Transportadora">
+          <img src="../assets/images/logo_transportadora.png" style="height:50px;" alt="Logo da Transportadora" tabindex="1">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir navegação" tabindex="2">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item">
+              <a class="nav-link" href="#" title="Fazer novo pedido" tabindex="3">Novo Pedido</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" title="Pedidos em andamento" tabindex="4">Pedidos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" title="Contato" tabindex="5">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <main class="container" style="margin-top: 100px; max-width: 700px;">
+    <section aria-labelledby="titulo-pedido">
+      <h1 id="titulo-pedido" tabindex="6">Solicitar Pedido de Transporte</h1>
+      <p tabindex="7">Preencha os dados abaixo para solicitar a retirada de mercadoria no fornecedor.</p>
+      <form action="#" method="post" aria-label="Formulário de pedido de transporte" autocomplete="on">
+        <div class="form-group">
+          <label for="nomeSolicitante">Nome do Solicitante <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="text" class="form-control" id="nomeSolicitante" name="nomeSolicitante" aria-required="true" required tabindex="8" aria-label="Nome do Solicitante">
+        </div>
+        <div class="form-group">
+          <label for="emailSolicitante">E-mail para contato <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="email" class="form-control" id="emailSolicitante" name="emailSolicitante" aria-required="true" required tabindex="9" aria-label="E-mail para contato">
+        </div>
+        <div class="form-group">
+          <label for="telefoneSolicitante">Telefone <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="tel" class="form-control" id="telefoneSolicitante" name="telefoneSolicitante" aria-required="true" required tabindex="10" aria-label="Telefone">
+        </div>
+        <fieldset style="border:0; padding:0; margin:0;">
+          <legend id="fornecedor-legend" style="font-size:1.1em; margin-top:20px;" tabindex="11">Dados do Fornecedor</legend>
+          <div class="form-group">
+            <label for="nomeFornecedor">Nome do Fornecedor <span aria-hidden="true" style="color:red;">*</span></label>
+            <input type="text" class="form-control" id="nomeFornecedor" name="nomeFornecedor" aria-required="true" required tabindex="12" aria-label="Nome do Fornecedor">
+          </div>
+          <div class="form-group">
+            <label for="enderecoFornecedor">Endereço do Fornecedor <span aria-hidden="true" style="color:red;">*</span></label>
+            <input type="text" class="form-control" id="enderecoFornecedor" name="enderecoFornecedor" aria-required="true" required tabindex="13" aria-label="Endereço do Fornecedor">
+          </div>
+          <div class="form-group">
+            <label for="cidadeFornecedor">Cidade</label>
+            <input type="text" class="form-control" id="cidadeFornecedor" name="cidadeFornecedor" tabindex="14" aria-label="Cidade do Fornecedor">
+          </div>
+          <div class="form-group">
+            <label for="contatoFornecedor">Telefone do Fornecedor</label>
+            <input type="tel" class="form-control" id="contatoFornecedor" name="contatoFornecedor" tabindex="15" aria-label="Telefone do Fornecedor">
+          </div>
+        </fieldset>
+        <fieldset style="border:0; padding:0; margin:0;">
+          <legend id="mercadoria-legend" style="font-size:1.1em; margin-top:20px;" tabindex="16">Informações da Mercadoria</legend>
+          <div class="form-group">
+            <label for="descricaoMercadoria">Descrição da Mercadoria <span aria-hidden="true" style="color:red;">*</span></label>
+            <input type="text" class="form-control" id="descricaoMercadoria" name="descricaoMercadoria" aria-required="true" required tabindex="17" aria-label="Descrição da Mercadoria">
+          </div>
+          <div class="form-group">
+            <label for="quantidade">Quantidade <span aria-hidden="true" style="color:red;">*</span></label>
+            <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" aria-required="true" required tabindex="18" aria-label="Quantidade">
+          </div>
+          <div class="form-group">
+            <label for="peso">Peso Total (kg)</label>
+            <input type="number" class="form-control" id="peso" name="peso" min="0" step="0.01" tabindex="19" aria-label="Peso Total em Quilogramas">
+          </div>
+          <div class="form-group">
+            <label for="tipoCarga">Tipo de Carga</label>
+            <select class="form-control" id="tipoCarga" name="tipoCarga" tabindex="20" aria-label="Tipo de Carga">
+              <option value="">Selecione</option>
+              <option value="paletizada">Paletizada</option>
+              <option value="granel">Granel</option>
+              <option value="container">Container</option>
+              <option value="fracionada">Fracionada</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="dataRetirada">Data para Retirada <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="date" class="form-control" id="dataRetirada" name="dataRetirada" aria-required="true" required tabindex="21" aria-label="Data para Retirada">
+        </div>
+        <div class="form-group">
+          <label for="observacoes">Observações</label>
+          <textarea class="form-control" id="observacoes" name="observacoes" rows="3" tabindex="22" aria-label="Observações"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-contact" aria-label="Enviar pedido de transporte" tabindex="23">Enviar Pedido</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer-28" style="background:#005a8d; margin-top: 60px;">
+    <div class="footer-bg-layer">
+      <div class="container py-lg-3">
+        <div class="row footer-top-28">
+          <div class="col-md-2 footer-list-28 mt-5">
+            <img src="../assets/images/logo_transportadora.png" style="height:auto;max-width: 100%;" alt="Logo da Transportadora" tabindex="24">
+          </div>
+          <div class="col-md-1 footer-list-28 mt-5 d-none d-md-block"></div>
+          <div class="col-md-5 footer-list-28 mt-5">
+            <h6 class="footer-title-28" style="color:#00a1fc;">Contato</h6>
+            <ul>
+              <li>
+                <p><strong>Telefone:</strong> <a href="tel:11999999999" title="Telefone da transportadora" tabindex="25">(11) 99999-9999</a></p>
+              </li>
+              <li>
+                <p><strong>E-mail:</strong> <a href="mailto:contato@transportadora.com" title="E-mail da transportadora" tabindex="26">contato@transportadora.com</a></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-list-28 mt-5">
+            <img src="../assets/images/ilustracao_caminhao.png" style="height:auto;max-width: 100%;" alt="Ilustração de caminhão" tabindex="27">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
