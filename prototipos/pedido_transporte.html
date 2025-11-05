@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido de Transporte - PEERS Consulting + Technology</title>
+  <meta name="description" content="Solicite o transporte de mercadorias de forma rápida e eficiente com a PEERS.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --peers-blue: #011334;
+      --peers-lime: #E1FF00;
+      --peers-serene: #D8E8EE;
+      --peers-white: #FFFFFF;
+      --peers-gray: #F5F5F5;
+      --peers-blue-02: #677185;
+      --peers-blue-03: #99A1AE;
+      --peers-blue-04: #CCD0D6;
+      --peers-lime-02: #F3FF99;
+      --peers-lime-03: #F9FFCC;
+      --peers-serene-02: #E8F1F5;
+      --peers-serene-03: #EFF6F8;
+    }
+    * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    body {
+      background: linear-gradient(135deg, #F8FAFB 0%, var(--peers-serene) 100%);
+      min-height: 100vh;
+    }
+    .peers-logo {
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      font-size: 2.5rem;
+      color: var(--peers-blue);
+      position: relative;
+    }
+    .peers-logo .letter-e {
+      display: inline-block;
+      position: relative;
+      transform: scaleX(1.2);
+      margin: 0 -2px;
+    }
+    .logo-plus {
+      color: var(--peers-lime);
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin: 0 0.5rem;
+    }
+    .logo-tagline {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--peers-blue);
+      opacity: 0.8;
+    }
+    .bg-peers-blue { background-color: var(--peers-blue); }
+    .bg-peers-lime { background-color: var(--peers-lime); }
+    .bg-peers-serene { background-color: var(--peers-serene); }
+    .bg-peers-gray { background-color: var(--peers-gray); }
+    .text-peers-blue { color: var(--peers-blue); }
+    .text-peers-lime { color: var(--peers-lime); }
+    .border-peers-blue { border-color: var(--peers-blue); }
+    .border-peers-lime { border-color: var(--peers-lime); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--peers-blue) 0%, #023059 100%);
+      color: white;
+      padding: 0.875rem 2.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 6px rgba(1, 19, 52, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(225, 255, 0, 0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(1, 19, 52, 0.2);
+    }
+    .btn-secondary {
+      background-color: white;
+      color: var(--peers-blue);
+      padding: 0.875rem 2.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      border: 2px solid var(--peers-blue);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-secondary:hover {
+      background-color: var(--peers-blue);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(1, 19, 52, 0.15);
+    }
+    .spinner {
+      border: 3px solid var(--peers-gray);
+      border-top: 3px solid var(--peers-blue);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @media (max-width: 768px) {
+      .peers-logo { font-size: 1.75rem; }
+      .logo-tagline { font-size: 0.75rem; }
+      button { min-height: 44px; }
+      .text-lg { font-size: 1rem; }
+      .text-xl { font-size: 1.125rem; }
+      .text-2xl { font-size: 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      .container { padding-left: 0.75rem; padding-right: 0.75rem; }
+      button { font-size: 0.875rem; }
+    }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--peers-gray); }
+    ::-webkit-scrollbar-thumb { background: var(--peers-blue); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--peers-blue-02); }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-peers-blue text-white py-4 md:py-6 px-4 md:px-8 shadow-lg">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
+      <img src="https://d3fh32tca5cd7q.cloudfront.net/wp-content/uploads/2025/03/logo.svg" alt="PEERS" class="h-8 md:h-10 w-auto">
+      <div class="text-xs md:text-sm text-center">
+        <span class="text-peers-lime">Pedido de Transporte</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Loading Spinner Overlay -->
+  <div id="loadingSpinner" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="spinner" aria-label="Carregando"></div>
+  </div>
+
+  <main class="container mx-auto px-3 sm:px-4 lg:px-8 py-4 sm:py-6 lg:py-8 max-w-2xl">
+    <div id="formSection" class="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 mb-8 fade-in-up">
+      <h1 class="text-2xl sm:text-3xl font-bold text-peers-blue mb-3">Solicitação de Pedido de Transporte</h1>
+      <p class="text-base text-gray-600 mb-6">Preencha os dados abaixo para solicitar a retirada de mercadoria no fornecedor.</p>
+      <form id="pedidoTransporteForm" autocomplete="off" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="razaoSocial">Razão Social do Fornecedor *</label>
+            <input id="razaoSocial" name="razaoSocial" type="text" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="80">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="cnpj">CNPJ do Fornecedor *</label>
+            <input id="cnpj" name="cnpj" type="text" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="18" placeholder="00.000.000/0000-00">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="endereco">Endereço de Retirada *</label>
+            <input id="endereco" name="endereco" type="text" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="120">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="cep">CEP *</label>
+            <input id="cep" name="cep" type="text" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="9" placeholder="00000-000">
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-gray-700 mb-1" for="contato">Nome do Contato no Fornecedor *</label>
+          <input id="contato" name="contato" type="text" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="60">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="telefone">Telefone do Contato *</label>
+            <input id="telefone" name="telefone" type="tel" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="15" placeholder="(11) 99999-9999">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="email">E-mail do Contato *</label>
+            <input id="email" name="email" type="email" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="60" placeholder="email@dominio.com">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="dataRetirada">Data para Retirada *</label>
+            <input id="dataRetirada" name="dataRetirada" type="date" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all">
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-1" for="periodo">Período *</label>
+            <select id="periodo" name="periodo" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all">
+              <option value="">Selecione...</option>
+              <option value="manha">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-xs font-medium text-gray-700 mb-1" for="descricao">Descrição da Mercadoria *</label>
+          <textarea id="descricao" name="descricao" required class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-peers-blue focus:border-transparent transition-all" maxlength="200" rows="3"></textarea>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 mt-6">
+          <button type="submit" class="btn-primary w-full sm:w-auto">Enviar Pedido</button>
+          <button type="button" id="limparBtn" class="btn-secondary w-full sm:w-auto">Limpar Formulário</button>
+        </div>
+        <div id="formError" class="text-red-600 text-sm mt-3 hidden"></div>
+      </form>
+    </div>
+    <div id="confirmSection" class="hidden bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 fade-in-up text-center">
+      <h2 class="text-2xl font-bold text-peers-blue mb-3">Pedido enviado com sucesso!</h2>
+      <p class="text-base text-gray-700 mb-4">Seu pedido foi registrado e será processado pela equipe PEERS.</p>
+      <div class="bg-gradient-to-r from-peers-lime-02 to-peers-serene-02 rounded-xl p-4 mb-4">
+        <span class="block text-peers-blue text-lg font-bold">Protocolo: <span id="protocoloNum"></span></span>
+      </div>
+      <button type="button" id="novoPedidoBtn" class="btn-primary">Fazer Novo Pedido</button>
+    </div>
+  </main>
+  <footer class="main-footer text-center py-6 text-peers-blue bg-peers-serene mt-8">
+    <p class="text-xs">&copy; 2025 PEERS Consulting + Technology.</p>
+  </footer>
+  <script>
+    // Máscaras de input
+    function maskCNPJ(value) {
+      value = value.replace(/\D/g, '');
+      value = value.replace(/(\d{2})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1.$2');
+      value = value.replace(/(\d{3})(\d)/, '$1/$2');
+      value = value.replace(/(\d{4})(\d)/, '$1-$2');
+      return value.slice(0, 18);
+    }
+    function maskCEP(value) {
+      value = value.replace(/\D/g, '');
+      value = value.replace(/(\d{5})(\d)/, '$1-$2');
+      return value.slice(0, 9);
+    }
+    function maskTelefone(value) {
+      value = value.replace(/\D/g, '');
+      value = value.replace(/(\d{2})(\d)/, '($1) $2');
+      value = value.replace(/(\d{5})(\d)/, '$1-$2');
+      return value.slice(0, 15);
+    }
+    document.getElementById('cnpj').addEventListener('input', function(e) {
+      e.target.value = maskCNPJ(e.target.value);
+    });
+    document.getElementById('cep').addEventListener('input', function(e) {
+      e.target.value = maskCEP(e.target.value);
+    });
+    document.getElementById('telefone').addEventListener('input', function(e) {
+      e.target.value = maskTelefone(e.target.value);
+    });
+    // Validação de campos
+    function validarEmail(email) {
+      return /^[\w-.]+@[\w-]+\.[\w-.]+$/.test(email);
+    }
+    function validarCNPJ(cnpj) {
+      cnpj = cnpj.replace(/\D/g, '');
+      if (cnpj.length !== 14) return false;
+      // Validação básica de CNPJ
+      var tamanho = cnpj.length - 2;
+      var numeros = cnpj.substring(0, tamanho);
+      var digitos = cnpj.substring(tamanho);
+      var soma = 0;
+      var pos = tamanho - 7;
+      for (var i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+      var resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(0)) return false;
+      tamanho = tamanho + 1;
+      numeros = cnpj.substring(0, tamanho);
+      soma = 0;
+      pos = tamanho - 7;
+      for (var i = tamanho; i >= 1; i--) {
+        soma += numeros.charAt(tamanho - i) * pos--;
+        if (pos < 2) pos = 9;
+      }
+      resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+      if (resultado != digitos.charAt(1)) return false;
+      return true;
+    }
+    function validarCEP(cep) {
+      return /^\d{5}-\d{3}$/.test(cep);
+    }
+    function validarTelefone(tel) {
+      return /^\(\d{2}\) \d{4,5}-\d{4}$/.test(tel);
+    }
+    // Limpar formulário
+    document.getElementById('limparBtn').addEventListener('click', function() {
+      document.getElementById('pedidoTransporteForm').reset();
+      document.getElementById('formError').classList.add('hidden');
+    });
+    // Novo pedido
+    document.getElementById('novoPedidoBtn').addEventListener('click', function() {
+      document.getElementById('confirmSection').classList.add('hidden');
+      document.getElementById('formSection').classList.remove('hidden');
+      document.getElementById('pedidoTransporteForm').reset();
+      document.getElementById('formError').classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // Envio do formulário
+    document.getElementById('pedidoTransporteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var f = e.target;
+      var erro = '';
+      // Coleta dos campos
+      var razaoSocial = f.razaoSocial.value.trim();
+      var cnpj = f.cnpj.value.trim();
+      var endereco = f.endereco.value.trim();
+      var cep = f.cep.value.trim();
+      var contato = f.contato.value.trim();
+      var telefone = f.telefone.value.trim();
+      var email = f.email.value.trim();
+      var dataRetirada = f.dataRetirada.value;
+      var periodo = f.periodo.value;
+      var descricao = f.descricao.value.trim();
+      // Validação
+      if (!razaoSocial || !cnpj || !endereco || !cep || !contato || !telefone || !email || !dataRetirada || !periodo || !descricao) {
+        erro = 'Preencha todos os campos obrigatórios.';
+      } else if (!validarCNPJ(cnpj)) {
+        erro = 'CNPJ inválido.';
+      } else if (!validarCEP(cep)) {
+        erro = 'CEP inválido.';
+      } else if (!validarTelefone(telefone)) {
+        erro = 'Telefone inválido.';
+      } else if (!validarEmail(email)) {
+        erro = 'E-mail inválido.';
+      } else {
+        var hoje = new Date();
+        var dataRet = new Date(dataRetirada + 'T00:00:00');
+        hoje.setHours(0,0,0,0);
+        if (dataRet < hoje) {
+          erro = 'A data de retirada deve ser hoje ou futura.';
+        }
+      }
+      if (erro) {
+        document.getElementById('formError').textContent = erro;
+        document.getElementById('formError').classList.remove('hidden');
+        return;
+      } else {
+        document.getElementById('formError').classList.add('hidden');
+      }
+      // Spinner ON
+      document.getElementById('loadingSpinner').classList.remove('hidden');
+      // Simula envio
+      setTimeout(function() {
+        document.getElementById('loadingSpinner').classList.add('hidden');
+        document.getElementById('formSection').classList.add('hidden');
+        document.getElementById('confirmSection').classList.remove('hidden');
+        var protocolo = 'TRP' + Math.floor(Math.random()*900000 + 100000);
+        document.getElementById('protocoloNum').textContent = protocolo;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1500);
+    });
+    // Acessibilidade: fechar spinner com ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('loadingSpinner').classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
