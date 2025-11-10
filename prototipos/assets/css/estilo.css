@@ -1,0 +1,166 @@
+/* =====================
+   Reset
+   ===================== */
+* {margin:0;padding:0;box-sizing:border-box;}
+html {font-size: 16px;}
+body {background: #F7F7F7; color: #222; font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.5;}
+a {color: inherit; text-decoration: none; transition: color .2s;}
+ul,ol {list-style: none;}
+img {max-width: 100%; height: auto; display: block;}
+button, input, select, textarea {font-family: inherit; font-size: inherit;}
+
+/* =====================
+   Variables
+   ===================== */
+:root {
+  --primary: #00a1fc;
+  --secondary: #005a8d;
+  --background: #F7F7F7;
+  --white: #fff;
+  --gray-light: #f6f7fb;
+  --gray-dark: #222;
+  --radius: 20px;
+}
+
+/* =====================
+   Typography
+   ===================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--secondary);
+  font-weight: 900;
+  margin-bottom: .5em;
+  line-height: 1.1;
+}
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.5rem;}
+.head {color: var(--primary); font-weight: 900; letter-spacing: -1px;}
+p {margin-bottom: 1em; color: #333;}
+
+/* =====================
+   Components
+   ===================== */
+.btn, .btn-primary, .btn-contact {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: var(--white);
+  border: none;
+  border-radius: 70px;
+  padding: 10px 35px;
+  font-size: 1.125rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.btn:hover, .btn-primary:hover, .btn-contact:hover {
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  color: var(--white);
+}
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+  font-size: 1rem;
+  background: var(--white);
+  transition: border .2s;
+}
+.form-control:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+label {font-weight: 600; margin-bottom: 5px; display: block;}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 20px #0001;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* =====================
+   Layout
+   ===================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.col {
+  flex: 1 1 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-12 {flex: 0 0 100%; max-width: 100%;}
+.col-md-6 {flex: 0 0 50%; max-width: 50%;}
+.col-md-4 {flex: 0 0 33.3333%; max-width: 33.3333%;}
+.col-md-3 {flex: 0 0 25%; max-width: 25%;}
+
+.header, .main-header, nav {
+  background: var(--white);
+  box-shadow: 0 2px 8px #0001;
+  padding: 16px 0;
+}
+.footer-28, .main-footer {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 32px 0 16px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 1200px) {
+  .container {max-width: 1000px;}
+}
+@media (max-width: 992px) {
+  .container {max-width: 760px;}
+  h1 {font-size: 2rem;}
+  h2 {font-size: 1.5rem;}
+}
+@media (max-width: 768px) {
+  .container {max-width: 98vw;}
+  .row {flex-direction: column;}
+  .col-md-6, .col-md-4, .col-md-3 {max-width: 100%; flex: 0 0 100%;}
+  .main-header, .footer-28, .main-footer {padding: 16px 0;}
+  h1 {font-size: 1.5rem;}
+  h2 {font-size: 1.2rem;}
+  .card {padding: 16px;}
+}
+@media (max-width: 576px) {
+  html {font-size: 15px;}
+  .container {padding: 0 6px;}
+  .btn, .btn-primary, .btn-contact {padding: 8px 18px; font-size: 1rem;}
+  .card {padding: 10px;}
+  h1, h2, h3 {margin-bottom: .3em;}
+}
+
+/* =====================
+   Utilidades
+   ===================== */
+.text-center {text-align: center !important;}
+.text-md-left {text-align: left !important;}
+.mt-5 {margin-top: 3rem !important;}
+.mb-4 {margin-bottom: 1.5rem !important;}
+.p-0 {padding: 0 !important;}
+.py-5 {padding-top: 3rem !important; padding-bottom: 3rem !important;}
+.pt-md-5 {padding-top: 3rem !important;}
+.d-none {display: none !important;}
+.d-block {display: block !important;}
+.d-md-none {display: none !important;}
+@media (max-width: 768px) {.d-md-none {display: block !important;}}
+
+/* =====================
+   Fim do CSS
+   ===================== */

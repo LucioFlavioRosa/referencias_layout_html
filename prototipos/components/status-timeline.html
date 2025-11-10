@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Timeline - Pedido</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <link rel="stylesheet" href="../../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../../porto_seguro_files/responsiveslides.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .timeline {
+      position: relative;
+      margin: 40px 0 40px 30px;
+      padding-left: 30px;
+      border-left: 3px solid #e0e0e0;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 40px;
+      min-height: 60px;
+    }
+    .timeline-circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      position: absolute;
+      left: -44px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px #0001;
+    }
+    .timeline-label {
+      margin-left: 10px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #005a8d;
+    }
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+    /* Cores dos status */
+    .circle-solicitado { background: #00a1fc; }
+    .circle-analise { background: #ffc107; color: #333; }
+    .circle-aprovado { background: #28a745; }
+    .circle-transito { background: #005a8d; }
+    .circle-entregue { background: #14532d; }
+    .timeline-step.active .timeline-label { color: #00a1fc; font-weight: 700; }
+    @media (max-width: 576px) {
+      .timeline { margin-left: 10px; padding-left: 18px; }
+      .timeline-circle { left: -32px; width: 22px; height: 22px; font-size: 0.9rem; }
+      .timeline-label { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline" aria-label="Linha do tempo de status do pedido">
+    <div class="timeline-step active">
+      <div class="timeline-circle circle-solicitado" aria-label="Solicitado"></div>
+      <span class="timeline-label">Solicitado</span>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle circle-analise" aria-label="Em Análise"></div>
+      <span class="timeline-label">Em Análise</span>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle circle-aprovado" aria-label="Aprovado"></div>
+      <span class="timeline-label">Aprovado</span>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle circle-transito" aria-label="Em Trânsito"></div>
+      <span class="timeline-label">Em Trânsito</span>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle circle-entregue" aria-label="Entregue"></div>
+      <span class="timeline-label">Entregue</span>
+    </div>
+  </div>
+</body>
+</html>

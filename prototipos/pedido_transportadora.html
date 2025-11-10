@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://simularseguroautos.com.br/assets/images/favicon.png">
+  <title>Pedido para Transportadora | Solicitar Retirada de Mercadoria</title>
+  <link rel="stylesheet" href="../porto_seguro_files/estilo.css">
+  <link rel="stylesheet" href="../porto_seguro_files/responsiveslides.css">
+  <meta name="description" content="Solicite o pedido de transporte para retirada de mercadoria no fornecedor.">
+  <meta name="keywords" content="Pedido, Transportadora, Retirada, Mercadoria, Fornecedor">
+  <script type="text/javascript" src="../porto_seguro_files/jquery.min.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/jquery.js.baixados"></script>
+  <script type="text/javascript" src="../porto_seguro_files/responsiveslides.min.js.baixados"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(function() {
+        $(".rslides").responsiveSlides({
+          auto: true,
+          speed: 2000,
+          timeout: 2000,
+          pager: false,
+          nav: true,
+          random: false,
+          pause: true,
+          pauseControls: false,
+          prevText: "Voltar",
+          nextText: "Próximo",
+          maxwidth: "1400",
+          navContainer: "",
+          manualControls: "",
+          namespace: "rslides",
+          before: function(){},
+          after: function(){}
+        });
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(function() {
+        $(".rslides-2").responsiveSlides({
+          auto: true,
+          speed: 2000,
+          timeout: 2000,
+          pager: true,
+          nav: true,
+          random: false,
+          pause: true,
+          pauseControls: false,
+          prevText: "Voltar",
+          nextText: "Próximo",
+          maxwidth: "1400",
+          navContainer: "",
+          manualControls: "",
+          namespace: "rslides",
+          before: function(){},
+          after: function(){}
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="w3l-bootstrap-header fixed-top">
+    <nav id="topo" class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../porto_seguro_files/logoSimular-Azul.png" style="height:50px;" alt="Simular Seguros e Porto Seguro" title="Simular Seguros e Porto Seguro">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav" style="margin-left: auto;">
+            <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Pedido Transportadora</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <main style="margin-top:90px;">
+    <section class="py-5" style="background: #00a1fc1a;">
+      <div class="container" style="max-width: 700px; background: #fff; border-radius: 20px; box-shadow: 0 4px 24px #00000010; padding: 40px 30px;">
+        <h1 class="head" style="color:#00a1fc; font-size: 38px; margin-bottom: 20px;">Pedido para Transportadora</h1>
+        <p style="font-size: 18px; color: #333; margin-bottom: 30px;">Preencha o formulário abaixo para solicitar o transporte para retirada de mercadoria no fornecedor.</p>
+        <form action="#" method="post" autocomplete="off">
+          <div class="form-group row">
+            <div class="col-md-12 mb-3">
+              <label for="fornecedor" class="form-label">Fornecedor <span style="color:red;">*</span></label>
+              <input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder="Nome do fornecedor" required>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="endereco_fornecedor" class="form-label">Endereço do Fornecedor <span style="color:red;">*</span></label>
+              <input type="text" class="form-control" id="endereco_fornecedor" name="endereco_fornecedor" placeholder="Endereço completo" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6 mb-3">
+              <label for="data_retirada" class="form-label">Data para Retirada <span style="color:red;">*</span></label>
+              <input type="date" class="form-control" id="data_retirada" name="data_retirada" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="hora_retirada" class="form-label">Horário para Retirada</label>
+              <input type="time" class="form-control" id="hora_retirada" name="hora_retirada">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6 mb-3">
+              <label for="destino" class="form-label">Destino <span style="color:red;">*</span></label>
+              <input type="text" class="form-control" id="destino" name="destino" placeholder="Endereço de entrega" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="responsavel_recebimento" class="form-label">Responsável pelo Recebimento</label>
+              <input type="text" class="form-control" id="responsavel_recebimento" name="responsavel_recebimento" placeholder="Nome do responsável">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6 mb-3">
+              <label for="tipo_mercadoria" class="form-label">Tipo de Mercadoria <span style="color:red;">*</span></label>
+              <input type="text" class="form-control" id="tipo_mercadoria" name="tipo_mercadoria" placeholder="Ex: Eletrônicos, Móveis" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="quantidade" class="form-label">Quantidade <span style="color:red;">*</span></label>
+              <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" placeholder="Quantidade" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12 mb-3">
+              <label for="observacoes" class="form-label">Observações</label>
+              <textarea class="form-control" id="observacoes" name="observacoes" rows="3" placeholder="Informações adicionais"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-contact" style="font-size: 20px; font-weight: 900; padding: 10px 35px; background: linear-gradient(45deg, #00a1fc, #006eac); border-color: #00a1fc; border-radius: 70px;">Solicitar Transporte</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-28" style="background:#005a8d; margin-top:40px;">
+    <div class="footer-bg-layer">
+      <div class="container py-lg-3">
+        <div class="row footer-top-28">
+          <div class="col-md-2 footer-list-28 mt-5">
+            <img src="../porto_seguro_files/uma-parceria-porto.png" style="height:auto;max-width: 100%;" alt="Porto Seguro">
+          </div>
+          <div class="col-md-1 footer-list-28 mt-5 d-none d-md-block"></div>
+          <div class="col-md-5 footer-list-28 mt-5">
+            <h6 class="footer-title-28" style="color:#00a1fc;">Contato</h6>
+            <ul>
+              <li>
+                <p><strong>Telefone:</strong> <a href="#">(11) 4224-1918</a></p>
+              </li>
+              <li>
+                <p><strong>WhatsApp</strong>: <a href="#">(11) 94720-2131</a></p>
+              </li>
+              <li>
+                <p><strong>E-mail</strong>: <a href="mailto:contato@empresa.com">contato@empresa.com</a></p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-list-28 mt-5">
+            <img src="../porto_seguro_files/logo-home-portoseguro.png" style="height:auto;max-width: 100%;" alt="Simular e Porto Seguro">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../porto_seguro_files/jquery-3.3.1.min.js.baixados"></script>
+  <script src="../porto_seguro_files/bootstrap.min.js.baixados"></script>
+  <a href="#" style="position:fixed;bottom:20px;right:20px;z-index:1000;"><img src="../porto_seguro_files/WhatsApp_logo.png" width="80" height="80" alt="WhatsApp"></a>
+  <div class="cookies-container" style="display: none;"><div class="cookies-content">
+    <div class="texto"><p>Nós utilizamos cookies para melhorar sua experiência em nossos serviços. Ao prosseguir navegando, você aceita esta <a href="#">política de monitoramento</a>.</p></div>
+    <button class="cookies-save">Permitir Cookies</button></div></div>
+  <script type="text/javascript">function cookies(functions) {const container = document.querySelector('.cookies-container');const save = document.querySelector('.cookies-save');if (!container || !save) return null;const localPref = JSON.parse(window.localStorage.getItem('cookies-pref'));if (localPref) activateFunctions(localPref);function getFormPref() {return [...document.querySelectorAll('[data-function]')].filter((el) => el.checked).map((el) => el.getAttribute('data-function'));}function activateFunctions(pref) {pref.forEach((f) => functions[f]());container.style.display = 'none';window.localStorage.setItem('cookies-pref', JSON.stringify(pref));}function handleSave() {const pref = getFormPref();activateFunctions(pref);}save.addEventListener('click', handleSave);}function marketing() {console.log('Função de marketing');}function analytics() {console.log('Função de analytics');}cookies({marketing,analytics,});</script>
+</body>
+</html>
